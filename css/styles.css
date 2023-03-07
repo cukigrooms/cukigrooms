@@ -11403,11 +11403,11 @@ header.masthead .masthead-heading {
     margin-bottom: 4rem;
   }
 }
-#galerija .galerija-box {
+#gallery .gallery-box {
   position: relative;
   display: block;
 }
-#galerija .galerija-box .galerija-box-caption {
+#gallery .gallery-box .gallery-box-caption {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11423,25 +11423,25 @@ header.masthead .masthead-heading {
   transition: opacity 0.25s ease;
   text-align: center;
 }
-#galerija .galerija-box .galerija-box-caption .project-category {
+#gallery .gallery-box .gallery-box-caption .project-category {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;
 }
-#galerija .galerija-box .galerija-box-caption .project-name {
+#gallery .gallery-box .gallery-box-caption .project-name {
   font-size: 1.2rem;
 }
-#galerija .galerija-box:hover .galerija-box-caption {
+#gallery .gallery-box:hover .gallery-box-caption {
   opacity: 1;
 }
 
-#o-meni .o-meni-img {
+#about-me .about-me-img {
   min-height: 30rem;
   background-size: cover;
 }
 @media (min-width: 768px) {
-  #o-meni .o-meni-text {
+  #about-me .about-me-text {
     padding: 5rem;
   }
 }
