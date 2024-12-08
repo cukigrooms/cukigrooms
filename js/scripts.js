@@ -55,10 +55,35 @@ window.addEventListener('DOMContentLoaded', event => {
     new SimpleLightbox({
         elements: '#galerija a.gallery-box',
     });
+});
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Create a MutationObserver to detect changes in the DOM
+    const observer = new MutationObserver(function(mutationsList, observer) {
+        mutationsList.forEach(function(mutation) {
+            // Look for the specific element with the combined classes
+            const poweredByButton = document.querySelector('.feed-powered-by-es.es-widget-branding.es-widget-branding-slider');
+            const brandingText = document.querySelector('.es-widget-branding-text');
+            const brandingImage = document.querySelector('img[src="https://embedsocial.com/cdn/icon/embedsocial-logo.webp"]');
+    
+            if (poweredByButton) {
+                poweredByButton.style.setProperty('display', 'none', 'important'); // Force display: none with !important
+            }
+            if (brandingText) {
+                brandingText.style.setProperty('display', 'none', 'important'); // Force display: none with !important
+            }
+            if (brandingImage) {
+                brandingImage.style.setProperty('display', 'none', 'important'); // Force display: none with !important
+            }
+            
+        });
+    });
 
+    // Start observing the body for changes (added child elements)
+    observer.observe(document.body, { childList: true, subtree: true });
 
-
+    // Optional: Disconnect after 2.5 seconds (optional for cleanup)
+    setTimeout(() => observer.disconnect(), 2500);  // Stop observing after 2.5 seconds
 });
 
 
