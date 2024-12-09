@@ -1,7 +1,7 @@
 /*!
-* Start Bootstrap - Agency v7.0.11 (https://startbootstrap.com/theme/agency)
+* Start Bootstrap - Landing Page v6.0.6 (https://startbootstrap.com/theme/landing-page)
 * Copyright 2013-2024 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-agency/blob/master/LICENSE)
+* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-landing-page/blob/master/LICENSE)
 */
 //
 // Scripts
@@ -53,11 +53,12 @@ window.addEventListener('DOMContentLoaded', event => {
 
      // Activate SimpleLightbox plugin for portfolio items
     new SimpleLightbox({
-        elements: '#galerija a.gallery-box',
-    });
+        elements: '#gallery a.gallery-box' });
+
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+
+ document.addEventListener('DOMContentLoaded', function() {
     // Create a MutationObserver to detect changes in the DOM
     const observer = new MutationObserver(function(mutationsList, observer) {
         mutationsList.forEach(function(mutation) {
@@ -85,5 +86,3 @@ document.addEventListener('DOMContentLoaded', function() {
     // Optional: Disconnect after 2.5 seconds (optional for cleanup)
     setTimeout(() => observer.disconnect(), 2500);  // Stop observing after 2.5 seconds
 });
-
-
